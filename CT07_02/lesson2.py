@@ -117,13 +117,13 @@ counter = 48
 # **Task: Using what you have learned above, code a program to
 # take a customer's order for pizza.
 # Declare a variable called _topping_.**
-topping_list = []
-while True:
-    toppings_question = input("what toppings do you want for your pizza?")
-    if toppings_question == "end":
-        break
-    topping_list.append(toppings_question)
-print(",".join(topping_list))
+# topping_list = []
+# while True:
+#     toppings_question = input("what toppings do you want for your pizza?")
+#     if toppings_question == "end":
+#         break
+#     topping_list.append(toppings_question)
+# print(",".join(topping_list))
 
 
 # Using a while loop:
@@ -149,3 +149,26 @@ print(",".join(topping_list))
 # 1. Add a score system
 # 2. Add an ability for users to skip by saying “skip”
 # 3. Disqualify user when they have tried too many times
+
+while True:
+    question=input("How many days are there in a week?").lower().strip()
+    if question == "7":
+        print("Your answer is correct")
+        break
+    # if question != "7":
+    print("The answer is wrong try again.")
+
+while True:
+    question2=input("How many hours are there in 1 day?").lower().strip()
+    if question2 == "24":
+        print("Your answer is correct")
+        break
+    print("The answer is wrong try again.")
+
+while True:
+    question3=input("what is 2 divided by 1?").lower().strip()
+    if question3 == "2":
+        print("Your answer is correct")
+        break
+    print("The answer is wrong try again.")
+    
