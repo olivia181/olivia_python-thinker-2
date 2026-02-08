@@ -67,11 +67,17 @@ import time
 #     "GO AND SEE MS TAN FOR REMEDIAL"
 
 import random
-question_counter = 0
-while question_counter <= 15:
+question_counter =0
+lives_counter=3
+for i in range(15):
     num1 = random.randint(2,20)
     num2 = random.randint(2,20)
-    question=input("what is " + str(num1) + " x " + str(num2) + ":")
-    if question == num1 * num2:
-        break
+    correct = num1 * num2
+    while lives_counter > 0:
+        question=input("what is " + str(num1) + " x " + str(num2) + ":")
+        if question == correct:
+            
+
+
+
 
