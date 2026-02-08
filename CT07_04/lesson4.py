@@ -99,12 +99,9 @@
 #    "I would like to visit Germany"
 #    "I would like to visit Japan"
 #    ... 
-country_list=[]
-while True:
-    question=input("what country would you like to visit?")
+
+
     
-
-
 # ---------------------------------------------------------------
 
 # ## Task 4: Restaurant Menu
@@ -116,6 +113,14 @@ while True:
 #    to input food items
 # 2. Add each food item into the menu list
 # 3. End the loop when the user types "end"
+# menu_list=[] 
+
+# while True:
+#     item=input("input food items:")
+#     if item == "end":
+#         break
+#     menu_list.append(item)
+
 
 # **Task 4b**:
 # Based on the list created by the restaurant manager, do
@@ -126,3 +131,17 @@ while True:
 # 2. If the food is in the list, say "Yes we sell that,
 #    please have a seat"
 # 3. else, say "Sorry, please go next door, bye."
+
+menu_list=[] 
+
+while True:
+    item=input("input food items:")
+    if item == "end":
+        break
+    menu_list.append(item)
+
+food=input("what would you like to eat?")
+if food in menu_list:
+    print("yes we sell that,please have a seat")
+else:
+    print("sorry, please go next door,bye")
