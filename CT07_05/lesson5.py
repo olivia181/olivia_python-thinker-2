@@ -118,5 +118,22 @@ pokemons = ["Pikachu", "Charizard", "Bulbasaur", "Squirtle",
 powers = [55, 84, 49, 48, 45,45, 52, 55, 110, 110,85, 65, 134, 130, 110,
 50, 125, 65, 110, 83]
 
+pokemon1=random.choice(pokemons)
+pokemon2=random.choice(pokemons)
+print(pokemon1,pokemon2)
 
+pokemon1_index=pokemons.index(pokemon1)
+pokemon2_index=pokemons.index(pokemon2)
+print(pokemon1_index,pokemon2_index)
+
+pokemon1_power=powers[pokemon1_index]
+pokemon2_power=powers[pokemon2_index]
+print(pokemon1_power,pokemon2_power)
+
+if pokemon1_power > pokemon2_power:
+    print(pokemon1,"stronger than",pokemon2)
+elif pokemon1_power > pokemon2_power:
+    print(pokemon2,"stronger than",pokemon1)
+elif pokemon1_power == pokemon2_power:
+    print("they have the same power")
 # Hint: import the random library and use random.choice(listname)
