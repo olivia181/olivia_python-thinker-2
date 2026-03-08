@@ -143,6 +143,14 @@ a2 = [
 
 a3 = []
 for i in range(len(a1)):
-    
+   a3.append([])
+   for j in range(len(a1[0])):
+      print(a3)
+      a3[i].append(a1[i][j]+a2[i][j])
+      
+
+print(a3)
+
 # find a3 if i want to add for example [1,2,3] and [7,9,3] = [1+7, 2+9, 3+3]
 # i want you to add each element at the respective to one another for a1 and a2
+
