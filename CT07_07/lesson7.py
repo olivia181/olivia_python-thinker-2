@@ -63,12 +63,18 @@
 # You are required to divide a basket of fruits.
 # Split the given list at the specified index:
 
-fruits = ["Apple", "Banana", "Cherry", "Durian", "Elderberry", "Figs"]
-index = 3
+# fruits = ["Apple", "Banana", "Cherry", "Durian", "Elderberry", "Figs"]
+# index = 3
 
 # 1. Use slicing to split the list at the provided index.
 # 2. Print the resulting sublists.
 
-print(fruits[:index])
-print(fruits[index:])
+# print(fruits[:index])
+# print(fruits[index:])
 
+
+nums = [4,7,2,9,5,8,1,6,3] 
+# Using slicing ONLY (no loops), 
+# extract all numbers at EVEN positions.
+print(nums[2:])
+print(nums[:9:])
