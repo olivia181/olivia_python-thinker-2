@@ -77,30 +77,50 @@
 
 ### Task 2b
 # Ask the user to a username and check if it is between 5 to 18 characters long.
-while True:
-    username=("enter your username:")
-    if len(username) >= 5 and len(username) <= 18 and username.isalpa():
-        break
-print("username entered")
+# while True:
+#     username=input("enter your username:")
+#     if len(username) >= 5 and len(username) <= 18 and username.isalpha():
+#         break
+# print("username entered")
 
 
 
 ## Task 3: Range Check (using a while loop)
 
 ### Task 3a
-# Ask the user to input their birth year and check if it is between 1900 and the current year. Keep asking until a correct value is given.
+# Ask the user to input their birth year and check if it is between 1900 and 
+# the current year. Keep asking until a correct value is given.
 
+# while True:
+#     birth_year = input("what is your birth year?")
+#     if birth_year.isdigit() and int(birth_year) > 1900 and int(birth_year) < 2027:
+#         break
+# print("age accepted ")
+
+     
 ### Task 3b
-# Ask the user to input their volume setting and check if it is between 0 and 100.
+# Ask the user to input their volume setting and check if it is between 0 and 
+# 100.
+# while True:
+#     volume=input("what is your volume setting?")
+#     if volume.isdigit() and int(volume) < 0 and int(volume) > 100:
+#          break
+# print("accepted volume")
+
 
 ## Task 4: Mocking Text Generator
-# Create a program that will turn regular sentences into a “SpongeBob Mocking” meme.
-# For example, the program will turn “Hello my name is James” into “HeLlO mY nAmE iS jAmEs”
+# Create a program that will turn regular sentences into a “SpongeBob Mocking” 
+# meme.
+# For example, the program will turn “Hello my name is James” into “HeLlO mY 
+# nAmE iS jAmEs”
 
 # 1. Using input(), ask the user for a sentence
 # 2. Use loops to iterate through each letter in the sentence
 # 3. Alternate between .upper() and .lower() for each letter
 # 4. Print the result.
+
+
+
 
 ## Task 5: Slice String
 # word = “SINGAPORE”
