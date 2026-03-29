@@ -119,11 +119,25 @@
 # 3. Alternate between .upper() and .lower() for each letter
 # 4. Print the result.
 
+# is_upper = True
+# sentence2 = ""
+# sentence=input("enter a sentence:")
+# for i in range(len(sentence)):
+#     if sentence[i].isalpha():
+#         if is_upper:
+#             sentence2 += sentence[i].upper()
+#         else:
+#             sentence2 += sentence[i].lower()
+#     else:
+#         sentence2 += sentence[i]
+#         is_upper = not is_upper
+# print(sentence)
+
 
 
 
 ## Task 5: Slice String
-# word = “SINGAPORE”
+# word = "SINGAPORE"
 
 # Slice the string and print these words:
 # a. SING
@@ -131,11 +145,31 @@
 # c. PORE
 # d. SNAOE
 
+
+
+# print(word[:4])
+# print(word[3:6])
+# print(word[5:9])
+# print(word[::2])
+
+
 ## Task 6: Palindrome
-# Ask the user for an input and check if it is a palindrome, until the input is ‘end’.
+# Ask the user for an input and check if it is a palindrome, 
+# until the input is ‘end’.
 
 # You can try this list of words:
-# - civic, kayak, level, madam, radar, refer, rotator, tenet, racecar, deified, stats, wow
+# civic, kayak, level, madam, radar, refer, rotator, tenet, racecar,
+ # deified, stats, wow]
+
+# while True:
+#     question=input("enter a word:")
+#     if question == "end":
+#         break
+#     if question[::-1] == question:
+#         print(question,"is a palindrome")
+#     else:
+#         print(question,"is not a palindrome")
+
 
 ## Task 7: Presence and Existence Checks
 # You are hosting a Birthday Party and have invited your friends.
@@ -146,9 +180,21 @@
 # Write a program to ask for the visitor’s name and check if:
 # - Name is entered (presence check)
 # - Name is in your friend list (existence check)
-
 # Ask for an input again if a name was not entered.
 # Accept the visitor if they are in the list, else deny their entry.
+
+# friends_list = ["emeline","charlotte","clarise","yashmita"]
+# while True:
+#     visitor= input("what is your name? :").strip()
+#     if visitor== "":
+#         print("please enter something")
+#     else:
+#         break
+#     if visitor in friends_list:
+#         print("accepted")
+#     else:
+#         print("deny")
+
 
 ## Task 8: Format Check
 # Ask the user to input their NRIC you need to check:
@@ -156,6 +202,33 @@
 # 2. First letter must be S, T, F, G, or M.
 # 3. Have 7 digits between the alphabets
 # 4. Be 9 characters long
+
+# first_letter = ["S", "T", "F", "G", "M"]
+# is_first_last_upper = False
+# has_seven_digit_between_alphabet = False
+# is_nine_char= False
+# is_first_letter_in_list = False
+
+# while True:
+#     nric = input("NRIC? :")
+#     if nric[0].isalpha() and nric[0].isupper() and nric[-1].isalpha() and nric[-1].isupper():
+#         is_first_last_upper = True
+#     if nric[1:len(nric)-1].isdigit():
+#         has_seven_digit_between_alphabet = True
+#     if nric[0] in first_letter:
+#         is_first_letter_in_list = True
+#     if is_first_last_upper and has_seven_digit_between_alphabet and is_first_letter_in_list and is_nine_char:
+#         break
+#     else:
+#         print("please enter correct format")
+
+
+
+
+
+
+
+
 
 ## Task 9: Password Validation
 # A website requires all passwords to
