@@ -211,7 +211,8 @@
 
 # while True:
 #     nric = input("NRIC? :")
-#     if nric[0].isalpha() and nric[0].isupper() and nric[-1].isalpha() and nric[-1].isupper():
+#     if nric[0].isalpha() and nric[0].isupper() and nric[-1].isalpha() 
+# and nric[-1].isupper():
 #         is_first_last_upper = True
 #     if nric[1:len(nric)-1].isdigit():
 #         has_seven_digit_between_alphabet = True
@@ -224,12 +225,6 @@
 
 
 
-
-
-
-
-
-
 ## Task 9: Password Validation
 # A website requires all passwords to
 # 1. Be at least 8 characters long
@@ -237,7 +232,36 @@
 # 3. Contain a number
 # 4. No other characters except alphabets or numbers.
 
-# Write a program that will ask the user for a password, and check if the password fits all criteria
+# Write a program that will ask the user for a password, and 
+# check if the password fits all criteria
+
+has_eight_digit_between_alphabet = False
+has_lower = False
+has_upper = False
+has_number = False
+no_others = False
+
+while True:
+    password=input("enter a password:")
+    for char in password: 
+        if char.islower(): 
+            has_lower = True
+        if char.isupper():
+            has_upper = True
+        if char.isdigit():
+            has_number = True
+    if password.isalnum():
+        no_others = True
+    if len(password) >= 8:
+        has_eight_digit_between_alphabet = True
+    if has_lower and has_upper and has_number and no_others and has_eight_digit_between_alphabet:
+        break
+    else:
+        print("please enter correct password")    
+            
+        
+
+
 
 # You may use some of the following passwords to test your program:
 # - PassW0rd
