@@ -98,39 +98,39 @@
 # 3. Create a function, “draw_square” that will draw a 20x20 square
 # 4. Using ‘for’ loops and the “draw_square” function you have created, draw the pattern shown on the screen.
 # 5. You will have to reposition your turtle before calling the “draw_square” function each time.
-import turtle
-turtle.setup(width=600, height=600)
+# import turtle
+# turtle.setup(width=600, height=600)
 
-artist =turtle.Turtle()
-artist.shape("arrow")
-artist.color("blue")
+# artist =turtle.Turtle()
+# artist.shape("arrow")
+# artist.color("blue")
 
-def draw_square():
-    artist.pendown()
-    for i in range(4):
-        artist.forward(20)
-        artist.right(90)
+# def draw_square():
+#     artist.pendown()
+#     for i in range(4):
+#         artist.forward(20)
+#         artist.right(90)
 
 
-artist.penup()
-artist.goto(60,-60)
-for i in range(6):
-    draw_square()
-    artist.forward(25)
+# artist.penup()
+# artist.goto(60,-60)
+# for i in range(6):
+#     draw_square()
+#     artist.forward(25)
 
-artist.penup()
-artist.goto(85,-85)
-for i in range(4):
-    draw_square()
-    artist.forward(25)
+# artist.penup()
+# artist.goto(85,-85)
+# for i in range(4):
+#     draw_square()
+#     artist.forward(25)
 
-artist.penup()
-artist.goto(110,-110)
-for i in range(2):
-    draw_square()
-    artist.forward(25)
+# artist.penup()
+# artist.goto(110,-110)
+# for i in range(2):
+#     draw_square()
+#     artist.forward(25)
 
-turtle.done()
+# turtle.done()
 
 # ## Task 2: Square in a Square
 # Use a function with parameters to draw 7 squares inside each other, getting smaller and smaller.
@@ -139,7 +139,36 @@ turtle.done()
 # 2. Create a 400x400 screen
 # 3. Create a function “draw_square” with a “size” parameter
 # 4. The “draw_square” function will draw a square of size*size around the (0,0) coordinate.
-# 5. Within a ‘for’ loop, use the “draw_square” function you have created to draw 7 squares around the (0,0) coordinate with the following sizes:50, 100, 150, 200, 250, 300, 350
+# 5. Within a ‘for’ loop, use the “draw_square” function you have created to draw 7 squares around the (0,0) coordinate with the following sizes:50, 100, 150, 200, 250, 300, 350
+# import turtle
+# turtle.setup(width=400, height=400)
+
+# artist =turtle.Turtle()
+# artist.shape("arrow")
+# artist.color("blue")
+
+# artist.penup()
+# artist.goto(0,0)
+# size= 350
+# def draw_square(size):
+#     artist.pendown()
+#     for i in range(4):
+#         artist.forward(size)
+#         artist.right(90)
+
+
+
+# for i in range(7):
+#     artist.goto(-size/2,size/2)
+#     draw_square(size)
+#     size= size - 50
+#     artist.penup()
+
+# turtle.done()
+
+
+
+
 
 # ## Task 3: Shape Creator
 # You want to create a shape creator program that will draw any shape you want simply by giving the program the length and number of sides that the shape must have.
@@ -152,6 +181,28 @@ turtle.done()
 # 2. The function should draw a shape with the length of sides and number of sides given by calculating the exterior angle
 # 3. Using the  draw_shape() function, draw the following:
 # - Pentagon, Hexagon, Octagon and Decagon
+# import turtle
+# turtle.setup(width=600, height=600)
+
+# artist =turtle.Turtle()
+# artist.penup()
+# artist.shape("arrow")
+# artist.color("blue")
+
+# length = int(input("enter a length:"))
+# num_sides= int(input("enter number of sides:"))
+
+# def draw_shape(length,num_sides):
+#     artist.pendown()
+#     for i in range(num_sides):
+#         artist.forward(length)
+#         artist.right(360/num_sides)
+#     artist.penup()
+# draw_shape(length,num_sides)
+
+# turtle.done()
+
+
 
 # ## Task 4: Drawing a House
 # You have been tasked to draw a house (made of a square and a triangle)
@@ -166,3 +217,32 @@ turtle.done()
 # 3. Create a turtle object and lift the pen to move without drawing
 # 4. Define ‘draw_shape’ function to draw a regular polygon based on specified length and number of sides
 # 5. Define ‘draw_house’ function that uses the ‘draw_shape’ function to combine a square and a triangle
+import turtle
+turtle.setup(width=600, height=600)
+
+artist =turtle.Turtle()
+artist.penup()
+artist.shape("arrow")
+artist.color("blue")
+
+
+def draw_shape(length1,num_sides1):
+    artist.pendown()
+    for i in range(num_sides1):
+        artist.forward(length1)
+        artist.left(360/num_sides1)
+    artist.penup()
+
+draw_shape(100,4)
+
+
+
+def draw_house(x,y):
+    draw_shape(100,4)
+    artist.goto(artist.xcor(),100)
+    draw_shape(100,3)
+
+
+
+draw_house(20,50)
+turtle.done()
