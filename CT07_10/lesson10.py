@@ -42,17 +42,17 @@
 # Use ‘if-elif-else’ statements to return the appropriate age group based on the ‘age’ parameter.
 
 
-def age_group(age):
-    if age <= 13:
-        return "child"
-    elif age <= 20:
-        return "teenager"
-    elif age <= 64:
-        return "adult"
-    else:
-        return "senior"
+# def age_group(age):
+#     if age <= 13:
+#         return "child"
+#     elif age <= 20:
+#         return "teenager"
+#     elif age <= 64:
+#         return "adult"
+#     else:
+#         return "senior"
     
-print(age_group(62))
+# print(age_group(12))
 
 # ## Task 3: Quadruple the Number 
 # Create a function that takes in a number and quadruples it.
@@ -65,6 +65,22 @@ print(age_group(62))
 # - 402 (ans: 1608)
 # - 594 (ans: 2376)
 
+# import random
+# number=random.randint(0,100)
+# quad_num = 0
+
+# def quadruple_number(number):
+#     quad_num = number*4
+#     return quad_num
+
+# # new_number = quadruple_number()
+
+# # 1. definition 
+# # 2. parameters => number 3
+# # 2. output 
+
+# new_number = quadruple_number(number)
+# print(new_number, "number = ", number)
 # ## Task 4: Sum of squares - Function within a function
 
 # ### Task 4a
@@ -77,6 +93,17 @@ print(age_group(62))
 # Square(7) >>> 49
 # square(3) >>> 9
 
+# import random
+# number=random.randint(0,100)
+def square(number):
+    square_num=number * number 
+    return square_num 
+# new_number=square(number)
+# print("square",number,"=",new_number)
+
+
+
+
 # ### Task 4b
 # Create a function ‘sum_of_squares()’ that will take in 2 numbers and return the sum of each of the number squared.
 
@@ -86,6 +113,45 @@ print(age_group(62))
 # sum_of_squares(3, 4) >>> 25
 # sum_of_squares(2, 7) >>> 53
 # sum_of_squares(9, 5) >>> 106
+
+# import random
+# number1=random.randint(0,100)
+# number2=random.randint(0,100)
+
+# def sum_of(number1,number2):
+#     new_number=square(number1)
+#     new_number2=square(number2)
+#     sum_of_num=new_number + new_number2
+#     return sum_of_num
+# answer=sum_of(number1,number2)
+# print(answer)
+
+# write a function to give a rectangle area with parameters width and height 
+# write another function to give triangle area with parameter width and height
+# both function should return the area respectively.
+# create a function using the above two function to find the total area of x num of triangle
+# of same height and base and y num of rectangle of same height and width 
+
+# width = 8
+# height = 9
+
+# def rectangle_area(width,height):
+#     area = width * height
+#     return area 
+# area_of=rectangle_area(width,height)
+# print(area_of)
+
+# def triangle_area(width,height):
+#     area= width * height * 0.5
+#     return area
+# area_of=triangle_area(width,height)
+# print(area_of)
+
+# def sum_of_tri_rec(width_tri,height_tri,width_rec,height_rec):
+#     return triangle_area(width_tri,height_tri) + rectangle_area(width_rec,height_rec)
+
+# sum=sum_of_tri_rec(width_tri,height_tri,width_rec,height_rec)
+# print(sum)
 
 # ## Task 5: Creating a turtle window
 # By creating and using the following function, create a turtle window that is 300(w) x 500(h):
@@ -99,6 +165,8 @@ print(age_group(62))
 # 5. ‘screenWidth’ variable
 # 6. ‘screenHeight’ variable
 
+import turtle
+turtle.setup(width=400, height=400)
 # ## Task 6: Creating a turtle object
 # By creating and using the following function, create a blue circular turtle object with its pen lifted: 
 # - create_blue_ball()
@@ -109,6 +177,15 @@ print(age_group(62))
 # 3. .color()
 # 4. .penup()
 # 5. return
+
+def create_blue_ball():
+    ball= turtle.Turtle()
+    ball.shape("circle")
+    ball.color("blue")
+    ball.penup()
+    return ball
+ball = create_blue_ball()
+
 
 # ## Task 7: Moving turtle object
 # By creating and using the following function, move the turtle object by ‘dx’ and ‘dy’ in a forever loop: 
@@ -122,6 +199,15 @@ print(age_group(62))
 # 5. ‘dx’ variable
 # 6. ‘dy’ variable
 
+def move_ball(ball,dx,dy):
+    ball.setx(ball.xcor()+dx)
+    ball.sety(ball.ycor()+dy)
+    
+dx = 2
+dy = 1
+while True:
+    move_ball(ball,dx,dy)
+ 
 # ## Task 8a: Detecting edge (x-axis)
 # By creating and using the following function, reverse the x-direction that the turtle object is moving when it touches the left/right side of the window: 
 # - check_x(ball, screenWidth)
@@ -133,7 +219,7 @@ print(age_group(62))
 # 3. or
 # 4. -screenWidth/2
 # 5. *= -1
-
+turtle.done()
 # ## Task 8b: Detecting edge (y-axis)
 # By creating and using the following function, reverse the y-direction that the turtle object is moving when it touches the top/bottom side of the window: 
 # - check_y(ball, screenHeight)
