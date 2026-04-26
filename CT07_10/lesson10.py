@@ -95,9 +95,9 @@
 
 # import random
 # number=random.randint(0,100)
-def square(number):
-    square_num=number * number 
-    return square_num 
+# def square(number):
+#     square_num=number * number 
+#     return square_num 
 # new_number=square(number)
 # print("square",number,"=",new_number)
 
@@ -203,11 +203,28 @@ def move_ball(ball,dx,dy):
     ball.setx(ball.xcor()+dx)
     ball.sety(ball.ycor()+dy)
     
+def check_x(ball, width):
+    return ball.xcor()> width/2 or ball.xcor()< - width/2
+    #     return True
+    # else:
+    #     return False
+
+def check_y(ball,width):
+    return ball.ycor()> height/2 or ball.ycor()< - height/2
+    #     return True
+    # else:
+    #     return False
+
+width = 400
+height = 400
 dx = 2
 dy = 1
 while True:
     move_ball(ball,dx,dy)
- 
+    if check_x(ball,width):
+        dx = -1 * dx
+    if check_y(ball,width):
+        dy = -1 * dy
 # ## Task 8a: Detecting edge (x-axis)
 # By creating and using the following function, reverse the x-direction that the turtle object is moving when it touches the left/right side of the window: 
 # - check_x(ball, screenWidth)
@@ -219,7 +236,11 @@ while True:
 # 3. or
 # 4. -screenWidth/2
 # 5. *= -1
+
+
+
 turtle.done()
+
 # ## Task 8b: Detecting edge (y-axis)
 # By creating and using the following function, reverse the y-direction that the turtle object is moving when it touches the top/bottom side of the window: 
 # - check_y(ball, screenHeight)
